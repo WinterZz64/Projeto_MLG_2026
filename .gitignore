@@ -1,0 +1,15 @@
+# Godot 4+
+.godot/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.temp
