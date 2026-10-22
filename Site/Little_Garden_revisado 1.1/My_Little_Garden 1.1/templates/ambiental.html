@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação - Little Garden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌱 Little Garden</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('sobre') }}">O Jogo</a>
+            <a href="{{ url_for('mecanicas') }}">Mecânicas</a>
+            <a href="{{ url_for('personagens') }}">Personagens</a>
+            <a href="{{ url_for('ambiental') }}">Recuperação</a>
+        </nav>
+    </header>
+    <main>
+        <section class="pagina-cabecalho">
+            <p class="subtitulo">CONSCIÊNCIA AMBIENTAL</p>
+            <h2>Uma ilha que precisa de cuidado</h2>
+            <p>A proposta ambiental é parte central do universo de Little Garden.</p>
+        </section>
+        <section class="secao">
+    <div class="secao-texto">
+        <p class="subtitulo">A PROPOSTA AMBIENTAL</p>
+        <h2>Recuperar a ilha, valorizar a natureza</h2>
+        <p>Little Garden usa a exploração de uma ilha afetada pela poluição como contexto para abordar a preservação ambiental.</p>
+        <p>Ao realizar atividades de plantio, coleta e recuperação de áreas, o jogador entra em contato com temas relacionados aos impactos do lixo sobre os ambientes naturais.</p>
+        <p>O objetivo educativo é apresentar essa temática de maneira interativa. O site não deve afirmar que o jogo produz mudanças reais de comportamento sem que isso tenha sido avaliado.</p>
+    </div>
+</section>
+<section class="secao secao-destaque">
+    <p class="subtitulo">NO JOGO</p>
+    <h2>Da poluição à recuperação</h2>
+    <div class="cards">
+        <article class="card"><h3>Observar</h3><p>Explorar as áreas e identificar sinais de contaminação representados no universo do jogo.</p></article>
+        <article class="card"><h3>Agir</h3><p>Realizar atividades de jogo ligadas ao cultivo, à coleta e à recuperação das regiões.</p></article>
+    </div>
+</section>
+    </main>
+    <footer>
+        <strong>🌱 Little Garden</strong>
+        <p>Projeto desenvolvido como TCC.</p>
+        <p>© Equipe 3°A 2026</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

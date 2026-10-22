@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Garden</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!--MENU-->
+    <header>
+        <h1>
+            🌱 Little Garden
+        </h1>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                Início
+            </a>
+            <a href="{{ url_for('sobre') }}">
+                O Jogo
+            </a>
+            <a href="{{ url_for('mecanicas') }}">
+                Mecânicas
+            </a>
+            <a href="{{ url_for('personagens') }}">
+                Personagens
+            </a>
+            <a href="{{ url_for('ambiental') }}">
+                Recuperação
+            </a>
+            <a href="{{ url_for('login') }}">
+                Entrar
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!--HERO-->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    UMA AVENTURA DE EXPLORAÇÃO E AGRICULTURA
+                </p>
+                <h2>
+                    Recupere a ilha.
+                    Devolva a vida à natureza.
+                </h2>
+                <p>
+                    Little Garden é uma aventura 2D
+                    em uma ilha tomada por uma misteriosa
+                    corrupção causada pelo lixo.
+                </p>
+                <a href="{{ url_for('sobre') }}"
+                class="botao">
+                    Conheça o jogo
+                </a>
+            </div>
+        </section>
+        <!--SOBRE-->
+        <section class="secao">
+            <div class="secao-texto">
+                <p class="subtitulo">
+                    SOBRE O JOGO
+                </p>
+                <h2>
+                    Uma ilha precisa de você.
+                </h2>
+                <p>
+                    O jogador controla o Gnomo, que vive
+                    em uma pequena base e parte em uma
+                    jornada para recuperar a natureza da ilha.
+                </p>
+                <p>
+                    Para avançar, será necessário cultivar
+                    plantas, explorar regiões perigosas,
+                    enfrentar criaturas corrompidas, coletar
+                    recursos e melhorar seus equipamentos.
+                </p>
+            </div>
+        </section>
+        <!--DUAS ATIVIDADES-->
+        <section class="secao secao-destaque">
+            <p class="subtitulo">
+                GAMEPLAY
+            </p>
+            <h2>
+                Duas formas de avançar.
+            </h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icone">
+                        🌱
+                    </div>
+                    <h3>
+                        Agricultura
+                    </h3>
+                    <p>
+                        Cultive, colha e venda plantas
+                        para conseguir recursos e dinheiro.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">
+                        ⚔️
+                    </div>
+                    <h3>
+                        Exploração
+                    </h3>
+                    <p>
+                        Explore regiões perigosas,
+                        enfrente criaturas corrompidas
+                        e consiga materiais para melhorar
+                        seus equipamentos.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--CICLO-->
+        <section class="secao">
+            <p class="subtitulo">
+                PROGRESSÃO
+            </p>
+            <h2>
+                Cada atividade tem um propósito.
+            </h2>
+            <p>
+                A agricultura fornece recursos e dinheiro.
+                A exploração fornece materiais e recursos
+                raros. O combate permite limpar as áreas
+                e a Árvore Lendária representa o progresso
+                do jogador.
+            </p>
+            <div class="progresso">
+                <div>
+                    <span>01</span>
+                    <strong>Plantar</strong>
+                </div>
+                <div>
+                    <span>02</span>
+                    <strong>Colher</strong>
+                </div>
+                <div>
+                    <span>03</span>
+                    <strong>Vender</strong>
+                </div>
+                <div>
+                    <span>04</span>
+                    <strong>Explorar</strong>
+                </div>
+                <div>
+                    <span>05</span>
+                    <strong>Enfrentar criaturas</strong>
+                </div>
+                <div>
+                    <span>06</span>
+                    <strong>Coletar recursos</strong>
+                </div>
+                <div>
+                    <span>07</span>
+                    <strong>Melhorar equipamentos</strong>
+                </div>
+                <div>
+                    <span>08</span>
+                    <strong>Purificar regiões</strong>
+                </div>
+            </div>
+        </section>
+        <!--MUNDO-->
+        <section class="secao mundo">
+            <p class="subtitulo">
+                O MUNDO
+            </p>
+            <h2>
+                Uma ilha dividida em diferentes regiões.
+            </h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>
+                        🏡 Base do Gnomo
+                    </h3>
+                    <p>
+                        Casa, plantações, árvores mágicas
+                        e os NPCs Treezinho e Pimentinho.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>
+                        🌿 Área Segura
+                    </h3>
+                    <p>
+                        Região voltada para agricultura,
+                        coleta e movimentação.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>
+                        🌲 Floresta Corrompida
+                    </h3>
+                    <p>
+                        Uma região com criaturas,
+                        lixo, recursos, baús e áreas
+                        que precisam ser purificadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--ÁRVORE LENDÁRIA-->
+        <section class="secao arvore">
+            <div>
+                <p class="subtitulo">
+                    O SÍMBOLO DA RECUPERAÇÃO
+                </p>
+                <h2>
+                    A Árvore Lendária
+                </h2>
+                <p>
+                    Representada pelo Pau-Brasil, a Árvore
+                    Lendária representa o progresso do jogador
+                    e a recuperação da ilha.
+                </p>
+                <p>
+                    Ao limpar regiões e derrotar criaturas,
+                    o jogador contribui para atingir as metas
+                    necessárias para purificá-las e liberar
+                    novos caminhos.
+                </p>
+            </div>
+        </section>
+        <!--FINAL-->
+        <section class="chamada">
+            <p class="subtitulo">
+                LITTLE GARDEN
+            </p>
+            <h2>
+                De uma ilha corrompida
+                a um lugar cheio de vida.
+            </h2>
+            <a href="{{ url_for('sobre') }}"
+            class="botao">
+                Explorar o projeto
+            </a>
+        </section>
+    </main>
+    <!--RODAPÉ-->
+    <footer>
+        <strong>
+            🌱 Little Garden
+        </strong>
+        <p>
+            Projeto desenvolvido como TCC.
+        </p>
+        <p>
+            © Equipe 3°A 2026
+        </p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

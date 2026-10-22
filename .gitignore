@@ -13,3 +13,12 @@ desktop.ini
 # Arquivos temporários
 *.tmp
 *.temp
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Arquivos de log
+*.log

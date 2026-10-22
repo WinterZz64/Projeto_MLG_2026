@@ -1,0 +1,35 @@
+{% extends "base.html" %}{% block title %}Um pequeno mundo, muitas possibilidades{% endblock %}{% block content %}
+<section class="hero section-wrap">
+  <div class="hero-copy">
+    <span class="eyebrow"><span class="dot"></span> UMA AVENTURA COZY DE EXPLORAÇÃO</span>
+    <h1>Um pequeno mundo.<br><em>Muitas formas</em> de florescer.</h1>
+    <p class="lead">Uma ilha esquecida, um gnomo corajoso e uma natureza que precisa de uma segunda chance. Plante, explore e ajude Little Garden a recuperar sua beleza.</p>
+    <div class="hero-actions"><a class="button" href="{{ url_for('sobre') }}">Descobrir o jogo <span>↗</span></a><a class="text-link" href="{{ url_for('mecanicas') }}">Conhecer as mecânicas <span>→</span></a></div>
+    <div class="hero-note"><span class="tiny-flower">✿</span><span><b>Devagar também é progresso.</b><small>Cuide de cada cantinho no seu ritmo.</small></span></div>
+  </div>
+  <div class="hero-art image-placeholder hero-placeholder" role="img" aria-label="Espaço reservado para a ilustração principal do jogo">
+    <div class="placeholder-label"><span>✧</span> SUA ILUSTRAÇÃO PRINCIPAL AQUI</div>
+    <div class="floating-note note-top">um lugar para recomeçar ✿</div><div class="floating-note note-bottom">respire fundo · explore 🌱</div>
+    <span class="art-sparkle sparkle-one">✦</span><span class="art-sparkle sparkle-two">✿</span>
+  </div>
+  <span class="decor-leaf decor-hero-one" aria-hidden="true">❧</span><span class="decor-leaf decor-hero-two" aria-hidden="true">✿</span>
+</section>
+<section class="ticker" aria-label="Temas do jogo"><div>✿ CULTIVAR <span>✦</span> EXPLORAR <span>✿</span> RESTAURAR <span>✦</span> CUIDAR <span>✿</span> CULTIVAR <span>✦</span> EXPLORAR <span>✿</span> RESTAURAR</div></section>
+<section class="section-wrap intro-grid">
+  <div class="section-heading"><span class="eyebrow">BEM-VINDO À ILHA</span><h2>Um mundo que precisa<br>de <em>um pouco de cuidado.</em></h2></div>
+  <div class="intro-copy"><p>O que antes era cheio de vida foi tomado pela poluição. Agora, cabe ao nosso pequeno jardineiro explorar a ilha, descobrir seus segredos e devolver o verde aos lugares esquecidos.</p><a class="text-link" href="{{ url_for('sobre') }}">Conheça essa história <span>→</span></a></div>
+</section>
+<section class="section-wrap feature-section">
+  <div class="section-topline"><div><span class="eyebrow">SUA JORNADA</span><h2>Pequenas coisas, <em>grandes mudanças.</em></h2></div><p>Cada atividade ajuda a reconstruir a ilha, um passo de cada vez.</p></div>
+  <div class="feature-grid">
+    <article class="feature-card feature-green"><div class="feature-symbol">♧</div><span class="card-number">01 / CULTIVAR</span><h3>Plante novas histórias</h3><p>Prepare a terra, cuide das sementes e acompanhe a vida crescendo com você.</p><a href="{{ url_for('mecanicas') }}">Explorar agricultura ↗</a><div class="card-leaves" aria-hidden="true">❧</div></article>
+    <article class="feature-card feature-peach"><div class="feature-symbol">⌁</div><span class="card-number">02 / EXPLORAR</span><h3>Descubra o que se perdeu</h3><p>Entre em novas regiões, encontre recursos e revele os mistérios escondidos pela ilha.</p><a href="{{ url_for('mecanicas') }}">Explorar a ilha ↗</a><div class="card-leaves" aria-hidden="true">✿</div></article>
+    <article class="feature-card feature-lilac"><div class="feature-symbol">❀</div><span class="card-number">03 / RESTAURAR</span><h3>Devolva a vida à natureza</h3><p>Limpe áreas poluídas e transforme cenários degradados em lugares vivos.</p><a href="{{ url_for('ambiental') }}">A proposta ambiental ↗</a><div class="card-leaves" aria-hidden="true">❧</div></article>
+  </div>
+</section>
+<section class="section-wrap image-story">
+  <div class="story-image image-placeholder"><div class="placeholder-label">ESPAÇO PARA IMAGEM DO JOGO</div><span class="image-caption">uma paisagem da ilha</span></div>
+  <div class="story-copy"><span class="eyebrow">MAIS DO QUE UM JARDIM</span><h2>O mundo muda quando <em>alguém se importa.</em></h2><p>Little Garden combina exploração e agricultura com uma mensagem simples: nossas escolhas afetam os ambientes em que vivemos. Aprender sobre cuidado ambiental também pode ser uma aventura.</p><a class="button button-dark" href="{{ url_for('ambiental') }}">Conheça a proposta <span>↗</span></a></div>
+</section>
+<section class="community-band section-wrap"><span class="community-flower">✿</span><div><span class="eyebrow">UM CANTINHO É SEU TAMBÉM</span><h2>Guarde seu lugar no jardim.</h2><p>Crie sua conta para acessar seu perfil no portal Little Garden.</p></div><a class="button button-light" href="{{ url_for('cadastro') }}">Criar minha conta <span>→</span></a></section>
+{% endblock %}

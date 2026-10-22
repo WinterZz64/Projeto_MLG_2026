@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>O Jogo - Little Garden</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- MENU -->
+    <header>
+        <h1>
+            🌱 Little Garden
+        </h1>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                Início
+            </a>
+            <a href="{{ url_for('sobre') }}">
+                O Jogo
+            </a>
+            <a href="{{ url_for('mecanicas') }}">
+                Mecânicas
+            </a>
+            <a href="{{ url_for('personagens') }}">
+                Personagens
+            </a>
+            <a href="{{ url_for('ambiental') }}">
+                Recuperação
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!-- TÍTULO -->
+        <section class="pagina-cabecalho">
+            <p class="subtitulo">
+                CONHEÇA O PROJETO
+            </p>
+            <h2>
+                O que é Little Garden?
+            </h2>
+            <p>
+                Uma aventura em uma ilha que precisa
+                recuperar sua natureza.
+            </p>
+        </section>
+        <!-- SOBRE -->
+        <section class="secao">
+            <div class="secao-texto">
+                <p class="subtitulo">
+                    A PROPOSTA
+                </p>
+                <h2>
+                    Uma ilha tomada pela corrupção.
+                </h2>
+                <p>
+                    Little Garden é um jogo 2D de aventura,
+                    exploração e agricultura.
+                </p>
+                <p>
+                    O jogador controla o Gnomo, que vive
+                    em uma pequena base e parte para explorar
+                    uma ilha afetada por uma misteriosa
+                    corrupção causada pelo lixo.
+                </p>
+                <p>
+                    Durante sua jornada, o jogador deve
+                    recuperar a natureza da ilha enquanto
+                    desenvolve sua plantação, explora novas
+                    regiões e enfrenta criaturas corrompidas.
+                </p>
+            </div>
+        </section>
+        <!-- OBJETIVO -->
+        <section class="secao secao-destaque">
+            <p class="subtitulo">
+                OBJETIVO
+            </p>
+            <h2>
+                Recuperar a natureza da ilha.
+            </h2>
+            <p>
+                A progressão do jogo está relacionada à
+                exploração, à coleta de recursos, ao combate
+                e à purificação das regiões corrompidas.
+            </p>
+            <p>
+                Conforme o jogador avança, novas áreas podem
+                ser liberadas e a recuperação da ilha progride.
+            </p>
+        </section>
+        <!-- BASE -->
+        <section class="secao">
+            <p class="subtitulo">
+                A BASE
+            </p>
+            <h2>
+                O ponto de partida.
+            </h2>
+            <p>
+                A base do Gnomo funciona como o centro
+                das atividades do jogador.
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icone">
+                        🌱
+                    </div>
+                    <h3>
+                        Plantação
+                    </h3>
+                    <p>
+                        Local onde o jogador cultiva
+                        suas plantas.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">
+                        🌳
+                    </div>
+                    <h3>
+                        Árvores mágicas
+                    </h3>
+                    <p>
+                        Árvores presentes na base que
+                        fazem parte do ecosistema magico da ilha
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">
+                        🏪
+                    </div>
+                    <h3>
+                        Loja
+                    </h3>
+                    <p>
+                        Espaço relacionado à compra
+                        e venda de recursos.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">
+                        ⚒️
+                    </div>
+                    <h3>
+                        Melhorias
+                    </h3>
+                    <p>
+                        Local relacionado à evolução
+                        dos equipamentos do jogador.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- MUNDO -->
+        <section class="secao mundo">
+            <p class="subtitulo">
+                O MUNDO
+            </p>
+            <h2>
+                Explore diferentes regiões.
+            </h2>
+            <p>
+                A ilha é dividida em regiões que fazem
+                parte da progressão do jogador.
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <h3>
+                        🏡 Base do Gnomo
+                    </h3>
+                    <p>
+                        Área inicial e centro das
+                        atividades do jogador.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>
+                        🌿 Área Segura
+                    </h3>
+                    <p>
+                        Região voltada principalmente
+                        para agricultura e coleta.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>
+                        🌲 Floresta Corrompida
+                    </h3>
+                    <p>
+                        Região com criaturas, lixo,
+                        recursos e áreas que precisam
+                        ser purificadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ÁRVORE -->
+        <section class="arvore">
+            <div>
+                <p class="subtitulo">
+                    PROGRESSÃO
+                </p>
+                <h2>
+                    A Árvore Lendária
+                </h2>
+                <p>
+                    A Árvore Lendária é representada
+                    pelo Pau-Brasil e funciona como um
+                    símbolo do progresso do jogador e
+                    da recuperação da ilha.
+                </p>
+                <p>
+                    A recuperação das regiões e o avanço
+                    do jogador estão relacionados às metas
+                    de purificação.
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- RODAPÉ -->
+    <footer>
+        <strong>
+            🌱 Little Garden
+        </strong>
+        <p>
+            Projeto desenvolvido como TCC.
+        </p>
+        <p>
+            © Equipe 3°A 2026
+        </p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

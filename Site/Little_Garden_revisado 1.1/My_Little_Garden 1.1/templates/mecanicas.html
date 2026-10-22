@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânicas - Little Garden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌱 Little Garden</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('sobre') }}">O Jogo</a>
+            <a href="{{ url_for('mecanicas') }}">Mecânicas</a>
+            <a href="{{ url_for('personagens') }}">Personagens</a>
+            <a href="{{ url_for('ambiental') }}">Recuperação</a>
+        </nav>
+    </header>
+    <main>
+        <section class="pagina-cabecalho">
+            <p class="subtitulo">COMO JOGAR</p>
+            <h2>Agricultura, exploração e recuperação</h2>
+            <p>Conheça os sistemas de jogo descritos no projeto Little Garden.</p>
+        </section>
+        <section class="secao">
+    <div class="secao-texto">
+        <p class="subtitulo">CICLO DE JOGO</p>
+        <h2>Atividades que se conectam</h2>
+        <p>De acordo com a descrição atual do projeto, a agricultura e a exploração são os principais eixos de progressão.</p>
+    </div>
+    <div class="cards">
+        <article class="card"><div class="card-icone">🌱</div><h3>Agricultura</h3><p>Plantar e colher recursos para apoiar o progresso do jogador.</p></article>
+        <article class="card"><div class="card-icone">🧭</div><h3>Exploração</h3><p>Investigar regiões da ilha e encontrar recursos e áreas que precisam de recuperação.</p></article>
+        <article class="card"><div class="card-icone">🧰</div><h3>Recursos e melhorias</h3><p>A descrição atual menciona coleta de materiais e melhoria de equipamentos. Confirmar os detalhes com a equipe do jogo.</p></article>
+        <article class="card"><div class="card-icone">🌳</div><h3>Recuperação</h3><p>A purificação de regiões é apresentada como parte da progressão. As regras exatas ainda devem ser definidas.</p></article>
+    </div>
+</section>
+    </main>
+    <footer>
+        <strong>🌱 Little Garden</strong>
+        <p>Projeto desenvolvido como TCC.</p>
+        <p>© Equipe 3°A 2026</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
