@@ -93,13 +93,13 @@ func _on_npc_shop_body_exited(body: Node2D) -> void:
 	pode_vender = "nao"
 
 func _on_ir_planatcao_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file.bind("res://scenes/plantacao.tscn").call_deferred()
+	get_tree().change_scene_to_file.bind("res://scenes/AreaPlantacao.tscn").call_deferred()
 
 func _on_ir_inicio_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file.bind("res://scenes/inicio.tscn").call_deferred()
+	get_tree().change_scene_to_file.bind("res://scenes/AreaInicio.tscn").call_deferred()
 
 func _on_ir_inimigo_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file.bind("res://scenes/inimigo.tscn").call_deferred()
+	get_tree().change_scene_to_file.bind("res://scenes/AreaInimigo.tscn").call_deferred()
 
 func _on_ir_planatcao_saida_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file.bind("res://scenes/plantacao.tscn").call_deferred()
+	get_tree().change_scene_to_file.bind("res://scenes/AreaPlantacao.tscn").call_deferred()
