@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Uma ilha para recuperar{% endblock %}
+{% block content %}
+<section class="hero section-wrap">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> JOGO 2D · AVENTURA, HORTA E EXPLORAÇÃO</div>
+    <h1>Um objetivo em comum<br><em>Dividido entre corações</em></h1>
+    <p class="lead">Em Little Garden, você controla um gnomo que tenta devolver a vida a uma ilha tomada por lixo. Plante, explore a floresta corrompida e junte recursos para seguir em frente.</p>
+    <div class="hero-actions"><a class="button" href="{{ url_for('sobre') }}">Conheça a história <span>↗</span></a><a class="text-link" href="{{ url_for('mecanicas') }}">Como se joga <span>→</span></a></div>
+    <div class="hero-proof"><span class="proof-icon">✳</span><span><b>Horta e aventura andam juntas</b><small>Plantar é a solução. Explorar abre caminhos.</small></span></div>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ url_for('static', filename='img/hero-island.webp') }}" alt="Ilha de fantasia com árvores, montanhas e uma árvore mágica iluminada">
+    <div class="visual-chip chip-top"><span class="chip-dot"></span> UMA ILHA CONTAMINADA</div>
+    <div class="visual-chip chip-bottom"><span>✳</span> PLANTAR · EXPLORAR · PURIFICAR</div>
+    <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+  </div>
+  <div class="hero-side-label">CULTIVE · EXPLORE · RECUPERE</div>
+</section>
+<section class="ticker" aria-label="Atividades previstas no jogo"><div><span>✳</span> CENOURA <i>✦</i> TOMATE <i>✦</i> EXPLORAÇÃO <i>✦</i> MATERIAIS <i>✦</i> ÁRVORE LENDÁRIA <i>✦</i> PURIFICAÇÃO <i>✦</i></div></section>
+<section class="section-wrap intro-section">
+  <div class="section-kicker"><span>01</span><span>O PROBLEMA DA ILHA</span></div>
+  <div class="intro-grid"><h2>O lixo tomou conta.<br><em>O gnomo não desistiu.</em></h2><div class="intro-copy"><p>Uma espécie de lixo mágico corrompe tudo o que toca. As criaturas ficam agressivas e partes da ilha deixam de ser seguras. A missão é recuperar cada região aos poucos, trazendo a vida de volta ao meio ambiente.</p><a class="text-link" href="{{ url_for('sobre') }}">Ver quem está por trás disso <span>↗</span></a></div></div>
+</section>
+<section class="feature-section">
+  <div class="section-wrap">
+    <div class="section-topline"><div><div class="eyebrow">O CICLO PRINCIPAL</div><h2>Cuide da base<br><em>Então, vá à luta.</em></h2></div><p>A proposta mistura duas atividades que se ajudam: a agricultura rende moedas, enquanto a exploração traz materiais e recursos.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card feature-farm"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/garden.webp') }}" alt="Ilustração de uma horta com plantas crescendo"></div><div class="feature-card-body"><div class="card-meta"><span>01 / CULTIVAR</span><span>✳</span></div><h3>Faça a horta render</h3><p>Cenouras e tomates ajudam a juntar moedas. As árvores mágicas ficam na base e produzem recursos ao longo do tempo.</p><a href="{{ url_for('mecanicas') }}">Ver a agricultura <span>↗</span></a></div></article>
+      <article class="feature-card feature-explore"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/exploration.webp') }}" alt="Ilustração de uma trilha em floresta de fantasia"></div><div class="feature-card-body"><div class="card-meta"><span>02 / EXPLORAR</span><span>✦</span></div><h3>Procure o que falta</h3><p>Na floresta corrompida, o gnomo enfrenta criaturas e procura moedas, sementes e materiais para melhorar os equipamentos.</p><a href="{{ url_for('mecanicas') }}">Ver a exploração <span>↗</span></a></div></article>
+      <article class="feature-card feature-restore"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/restoration.webp') }}" alt="Ilustração de uma paisagem verde restaurada"></div><div class="feature-card-body"><div class="card-meta"><span>03 / PURIFICAR</span><span>✧</span></div><h3>Faça o verde voltar</h3><p>A Árvore Lendária, representada pelo pau-brasil, acompanha o progresso e ajuda a purificar as regiões recuperadas.</p><a href="{{ url_for('ambiental') }}">Entender a proposta <span>↗</span></a></div></article>
+    </div>
+  </div>
+</section>
+<section class="section-wrap story-section">
+  <div class="story-visual"><img src="{{ url_for('static', filename='img/restoration.webp') }}" alt="Ilustração de uma floresta verde, símbolo da ilha depois da recuperação"><span class="story-tag">META: RECUPERAR A ILHA</span><div class="story-quote">Cada região limpa<br>é um passo adiante.</div></div>
+  <div class="story-copy"><div class="eyebrow">OS RESPONSÁVEIS PELA CORRUPÇÃO</div><h2>Trash e Bot-812 querem <em>um mundo podre.</em></h2><p>Nascidos do lixo, vivem pelo lixo. O gnomo vai na direção contrária: cultivar, explorar e reunir forças para recuperar a natureza.</p><a class="button button-outline" href="{{ url_for('personagens') }}">Conheça os personagens <span>↗</span></a></div>
+</section>
+<section class="community-section"><div class="community-inner section-wrap"><div class="community-emblem">✳</div><div><div class="eyebrow">PORTAL DO PROJETO</div><h2>Entre<br>e acompanhe o projeto.</h2><p>Crie uma conta para acessar seu perfil no site. O progresso do jogo ainda não é salvo nesse perfil.</p></div><a class="button button-light" href="{{ url_for('cadastro') }}">Criar conta <span>↗</span></a><span class="community-decoration">✦</span></div></section>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b17">
+  <meta name="description" content="Little Garden: explore uma ilha encantada, cultive a vida e ajude a natureza a florescer novamente.">
+  <title>{% block title %}Um pequeno mundo, muitas possibilidades{% endblock %} | Little Garden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/gnome.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="{{ url_for('index') }}" aria-label="Little Garden, início">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 22C8 23 9 7 20 10c3 1 4 6 4 12C25 9 39 7 39 17c0 7-8 8-15 7Z"/><path d="M24 22C10 19 9 32 18 34c3 1 5-4 6-10 0 14 14 16 15 6 1-7-8-8-15-8Z"/><circle cx="24" cy="24" r="4"/></svg></span>
+      <span class="brand-name">little<span>garden</span><small>UM MUNDO EM RECONSTRUÇÃO</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="{{ url_for('index') }}" class="{{ 'active' if request.endpoint == 'index' else '' }}">Início</a>
+      <a href="{{ url_for('sobre') }}" class="{{ 'active' if request.endpoint == 'sobre' else '' }}">O jogo</a>
+      <a href="{{ url_for('mecanicas') }}" class="{{ 'active' if request.endpoint == 'mecanicas' else '' }}">Mecânicas</a>
+      <a href="{{ url_for('personagens') }}" class="{{ 'active' if request.endpoint == 'personagens' else '' }}">Personagens</a>
+      <a href="{{ url_for('ambiental') }}" class="{{ 'active' if request.endpoint == 'ambiental' else '' }}">A ilha viva</a>
+    </nav>
+    <div class="header-account">
+    {% if current_user %}
+      <a class="account-link" href="{{ url_for('perfil') }}">Olá, {{ current_user['username'] }}</a>
+      <form action="{{ url_for('logout') }}" method="post"><input type="hidden" name="_csrf_token" value="{{ csrf_token() }}"><button class="button button-small button-ghost" type="submit">Sair</button></form>
+    {% else %}
+      <a class="account-link" href="{{ url_for('login') }}">Entrar</a>
+      <a class="button button-small" href="{{ url_for('cadastro') }}">Criar conta <span>↗</span></a>
+    {% endif %}
+    </div>
+  </header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}<div class="flash-wrap" aria-live="polite">{% for category, message in messages %}<div class="flash flash-{{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+  {% endwith %}
+  <main id="conteudo">{% block content %}{% endblock %}</main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="{{ url_for('index') }}"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-name">little<span>garden</span><small>UM MUNDO EM RECONSTRUÇÃO</small></span></a>
+      <p>Uma ilha pode florescer de novo.<br>Às vezes, tudo começa com uma semente.</p>
+      <div class="footer-links"><a href="{{ url_for('sobre') }}">Sobre o jogo</a><a href="{{ url_for('ambiental') }}">Nossa proposta</a><a href="{{ url_for('cadastro') }}">Comunidade</a></div>
+    </div>
+    <div class="footer-bottom"><small>PROJETO ACADÊMICO · LITTLE GARDEN</small><small>FEITO COM CUIDADO PELO NOSSO PEQUENO TIME <span>✳</span></small></div>
+  </footer>
+</body>
+</html>

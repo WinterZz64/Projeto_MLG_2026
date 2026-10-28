@@ -1,0 +1,28 @@
+# Segredos locais
+.env
+.env.*
+!.env.example
+
+# Banco de dados local e arquivos auxiliares do SQLite
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs e arquivos locais
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,38 @@
+{% extends "base.html" %}{% block title %}Um pequeno mundo, muitas possibilidades{% endblock %}{% block content %}
+<section class="hero section-wrap">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> UMA AVENTURA DE EXPLORAÇÃO E CUIDADO</div>
+    <h1>O mundo ainda<br>pode <em>florescer.</em></h1>
+    <p class="lead">Uma ilha esquecida. Um pequeno jardineiro. Uma natureza que merece uma segunda chance. Plante, explore e devolva a vida a Little Garden.</p>
+    <div class="hero-actions"><a class="button" href="{{ url_for('sobre') }}">Conheça o jogo <span>↗</span></a><a class="text-link" href="{{ url_for('mecanicas') }}">Explore as mecânicas <span>→</span></a></div>
+    <div class="hero-proof"><span class="proof-icon">✳</span><span><b>Um passo de cada vez</b><small>Cuide da ilha no seu próprio ritmo.</small></span></div>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ url_for('static', filename='img/hero-island.svg') }}" alt="Ilha de fantasia com árvores, montanhas e uma árvore mágica iluminada">
+    <div class="visual-chip chip-top"><span class="chip-dot"></span> UM LUGAR PARA RECOMEÇAR</div>
+    <div class="visual-chip chip-bottom"><span>✳</span> CULTIVAR · EXPLORAR · RESTAURAR</div>
+    <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+  </div>
+  <div class="hero-side-label">DESCUBRA · CUIDE · TRANSFORME</div>
+</section>
+<section class="ticker" aria-label="Temas do jogo"><div><span>✳</span> CULTIVAR <i>✦</i> EXPLORAR <i>✦</i> RESTAURAR <i>✦</i> CUIDAR <i>✦</i> CULTIVAR <i>✦</i> EXPLORAR <i>✦</i> RESTAURAR <i>✦</i></div></section>
+<section class="section-wrap intro-section">
+  <div class="section-kicker"><span>01</span><span>BOAS-VINDAS À ILHA</span></div>
+  <div class="intro-grid"><h2>Nem toda mudança<br>começa <em>grande.</em></h2><div class="intro-copy"><p>O que antes era cheio de vida foi tomado pela poluição. Agora, cabe ao nosso pequeno jardineiro explorar a ilha, descobrir seus segredos e devolver o verde aos lugares esquecidos.</p><a class="text-link" href="{{ url_for('sobre') }}">Conheça a história <span>↗</span></a></div></div>
+</section>
+<section class="feature-section">
+  <div class="section-wrap">
+    <div class="section-topline"><div><div class="eyebrow">A SUA JORNADA COMEÇA AQUI</div><h2>Pequenas ações.<br><em>Grandes mudanças.</em></h2></div><p>Explore um mundo que responde ao cuidado que você oferece. Cada descoberta abre espaço para algo novo crescer.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card feature-farm"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/garden.svg') }}" alt="Horta verde com mudas crescendo"></div><div class="feature-card-body"><div class="card-meta"><span>01 / CULTIVAR</span><span>✳</span></div><h3>Plante novas histórias</h3><p>Prepare a terra, cuide das sementes e acompanhe a vida crescendo com você.</p><a href="{{ url_for('mecanicas') }}">Descobrir a agricultura <span>↗</span></a></div></article>
+      <article class="feature-card feature-explore"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/exploration.svg') }}" alt="Trilha de aventura atravessando uma floresta fantástica"></div><div class="feature-card-body"><div class="card-meta"><span>02 / EXPLORAR</span><span>✦</span></div><h3>Vá além da trilha</h3><p>Encontre recursos, conheça novos lugares e descubra os segredos da ilha.</p><a href="{{ url_for('mecanicas') }}">Partir para explorar <span>↗</span></a></div></article>
+      <article class="feature-card feature-restore"><div class="feature-card-image"><img src="{{ url_for('static', filename='img/restoration.svg') }}" alt="Paisagem recuperada com água limpa e vegetação abundante"></div><div class="feature-card-body"><div class="card-meta"><span>03 / RESTAURAR</span><span>✧</span></div><h3>Devolva a vida</h3><p>Limpe áreas afetadas e veja os cenários se transformarem aos poucos.</p><a href="{{ url_for('ambiental') }}">A proposta ambiental <span>↗</span></a></div></article>
+    </div>
+  </div>
+</section>
+<section class="section-wrap story-section">
+  <div class="story-visual"><img src="{{ url_for('static', filename='img/restoration.svg') }}" alt="Floresta e rio em uma área restaurada da ilha"><span class="story-tag">A NATUREZA RESPONDE</span><div class="story-quote">“O cuidado também<br>é uma forma de coragem.”</div></div>
+  <div class="story-copy"><div class="eyebrow">MAIS DO QUE UM JARDIM</div><h2>O mundo muda quando <em>alguém se importa.</em></h2><p>Little Garden combina exploração e agricultura com uma mensagem simples: nossas escolhas afetam os ambientes em que vivemos. Aprender sobre cuidado ambiental também pode ser uma aventura.</p><a class="button button-outline" href="{{ url_for('ambiental') }}">Conheça nossa proposta <span>↗</span></a></div>
+</section>
+<section class="community-section"><div class="community-inner section-wrap"><div class="community-emblem">✳</div><div><div class="eyebrow">SEU LUGAR NESTE MUNDO</div><h2>Todo jardim começa<br>com alguém que cuida.</h2><p>Crie sua conta e acesse seu perfil no portal Little Garden.</p></div><a class="button button-light" href="{{ url_for('cadastro') }}">Criar minha conta <span>↗</span></a><span class="community-decoration">✦</span></div></section>
+{% endblock %}

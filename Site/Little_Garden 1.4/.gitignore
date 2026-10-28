@@ -1,0 +1,27 @@
+# Segredos e configurações locais
+.env
+.env.*
+!.env.example
+instance/
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+# Logs e arquivos temporários
+*.log
+.DS_Store
+Thumbs.db
