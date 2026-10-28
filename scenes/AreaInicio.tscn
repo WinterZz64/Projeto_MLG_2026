@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://d3deseunrmjft"]
+[gd_scene format=4 uid="uid://cqvu50sb87o3j"]
 
 [ext_resource type="Texture2D" uid="uid://cpjr8yl2yentc" path="res://art/graphics/tilesets/soil.png" id="2_7f3w5"]
 [ext_resource type="Texture2D" uid="uid://cu5i80jq8cqvq" path="res://art/Props/Water/water_01_16x16.png" id="2_kfyrf"]
@@ -23,9 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://cpf3pi3nehx2u" path="res://art/Props/Trees/Sprites/tree_32.png" id="21_vfye1"]
 [ext_resource type="Texture2D" uid="uid://bahar7tt7rk62" path="res://art/Props/Trees/Sprites/tree_29.png" id="22_ijrgl"]
 [ext_resource type="PackedScene" uid="uid://cj1pbi7u70nh4" path="res://scenes/player.tscn" id="23_vfye1"]
-[ext_resource type="Texture2D" uid="uid://b0d53g7u8o86i" path="res://art/graphics/Sprite-bolsa.png" id="25_j1e7b"]
+[ext_resource type="Texture2D" uid="uid://b0d53g7u8o86i" path="res://art/graphics/ui/Sprite-bolsa.png" id="25_j1e7b"]
 [ext_resource type="Script" uid="uid://cjocvk260okud" path="res://scripts/inventario.gd" id="25_k2hld"]
-[ext_resource type="Texture2D" uid="uid://c6bnnmmjt0eks" path="res://art/graphics/Sprite-inventario.png" id="27_yae6b"]
+[ext_resource type="Texture2D" uid="uid://c6bnnmmjt0eks" path="res://art/graphics/ui/Sprite-inventario.png" id="27_yae6b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kfyrf"]
 texture = ExtResource("2_kfyrf")
@@ -563,13 +563,13 @@ texture = ExtResource("25_j1e7b")
 shape = SubResource("RectangleShape2D_igvph")
 
 [node name="local_inventario" type="ColorRect" parent="CanvasLayer/inentario" unique_id=1192697194]
-offset_left = 313.0
-offset_top = -27.0
-offset_right = 353.0
-offset_bottom = 13.0
+offset_left = 416.0
+offset_top = -49.0
+offset_right = 456.0
+offset_bottom = -9.0
 
 [node name="SpriteInventario" type="Sprite2D" parent="CanvasLayer/inentario/local_inventario" unique_id=1412945693]
-position = Vector2(18, 14)
+position = Vector2(22, 26)
 scale = Vector2(2, 2)
 texture = ExtResource("27_yae6b")
 

@@ -1,5 +1,5 @@
 extends Node2D
-var plantar_milho = preload("res://scenes/milho.tscn")
+var plantar_milho = preload("res://scripts/milho.gd")
 
 
 func _ready() -> void:
